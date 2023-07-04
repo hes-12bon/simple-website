@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #223243;
+}
+
+.container{
+    position: relative;
+    padding: 40px;
+    background: #223243;
+    height: fit-content;
+    height: 600px;
+    max-width: 500px;
+    width: 100%;
+    background: #223243;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    inset 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.container header{
+    font-size: 1.5rem;
+    color: antiquewhite;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 20px;
+    border: 8px solid #223243;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+
+}
+
+.container .inputBox{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: black;
+    margin-top: 8px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 300px;
+    position: relative;
+    background: #223243;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: 300;
+    font-size: 1em;
+   
+   
+
+}
+
+.container .inputBox input{
+   
+    background: #223243;
+    height: 50px;
+    width: 100%;
+    border-radius: 25px;
+    padding: 12px 10px 12px 48px;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+    transition: 0.5s;
+    outline: none;
+}
+
+.container.form .input-box span{
+    margin-top: 20px;
+    position: absolute;
+    width: 300px;
+    left: 0;
+    padding: 12px 10px 48px;
+    pointer-events: none;
+    font-size: 1em;
+    font-weight: 300;
+
+}
+
+.container a{
+    position: relative;
+    color: rgb(120, 120, 228);
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+    transition: 0.5s;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.container a:hover{
+    color: antiquewhite;
+    background: #00dfc4;
+    box-shadow: 0 0 5px#00dfc4,
+                0 0 25px #00dfc4,
+                0 0 50px #00dfc4,
+                0 0 100px #00dfc4 ;
+}
+
+.container a span{
+    position: absolute;
+}
+
+.container a span:nth-child(1){
+    top: 0;
+    left: -100px;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent,#00dfc4 );
+    animation: toplineAnimation 1s linear infinite;
+}
+
+@keyframes toplineAnimation{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+
+.container a span:nth-child(2){
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(180deg, transparent,#00dfc4 );
+    animation: rightlineAnimation 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes rightlineAnimation{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+
+.container a span:nth-child(3){
+    right: -100%;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(270deg, transparent,#00dfc4 );
+    animation: bottomlineAnimation 1s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes bottomlineAnimation{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+.container a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(3600deg, transparent,#00dfc4 );
+    animation: leftlineAnimation 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes leftlineAnimation{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .form .column{
+        flex-wrap: wrap;
+    }
+}
